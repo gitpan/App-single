@@ -1,0 +1,26 @@
+---
+abstract: 'An application to run a single instance of a command'
+author:
+  - 'Jan Henning Thorsen <jhthorsen@cpan.org>'
+build_requires:
+  Test::More: 0.88
+configure_requires:
+  ExtUtils::MakeMaker: 0
+dynamic_config: 1
+generated_by: 'ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.120921'
+license: artistic_2
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: App-single
+no_index:
+  directory:
+    - t
+    - inc
+requires:
+  File::Spec: 3.00
+resources:
+  bugtracker: https://github.com/jhthorsen/app-single/issues
+  homepage: https://github.com/jhthorsen/app-single
+  repository: https://github.com/jhthorsen/app-single
+version: 0.01
