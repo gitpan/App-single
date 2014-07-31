@@ -43,8 +43,8 @@
       },
       "homepage" : "https://github.com/jhthorsen/app-single",
       "repository" : {
-         "url" : "https://github.com/jhthorsen/app-single"
+         "url" : "https://github.com/jhthorsen/app-single.git"
       }
    },
-   "version" : "0.01"
+   "version" : "0.02"
 }
