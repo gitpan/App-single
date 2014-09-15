@@ -6,12 +6,13 @@ App::single - An application to run a single instance of a command
 
 =head1 VERSION
 
-0.0401
+0.05
 
 =head1 DESCRIPTION
 
 L<App::single> is an application which allow you to run a single instance of
-a command. Example usage is from a cron:
+a command. This is useful when you want to run a process from
+L<crontab|http://crontab.org>. Example:
 
   * * * * * /usr/local/bin/single autossh example.com sleep 86400 2>/dev/null 1>/dev/null
 
@@ -32,6 +33,19 @@ NOTE: This script is not atomic, but more than good enough for handling the
 NOTE: Including shell characters (such as ">", "|", ";", ...) will invoke the
 shell, allowing unsafe user input.
 
+=head1 ENVIRONMENT
+
+=over 4
+
+=item * SINGLE_HUP_SIGNAL
+
+It is possible to send a HUP signal to the "single" process, which will
+restart the application. The way it restarts the application is simply
+by sending the C<SINGLE_HUP_SIGNAL> signal to the application. This
+is "TERM" by default.
+
+=back
+
 =head1 INSTALLATION
 
 The easiest way to get this application is by using cpanminus:
@@ -45,7 +59,7 @@ faster installation.
 
 use strict;
 
-our $VERSION = '0.0401';
+our $VERSION = '0.05';
 
 =head1 COPYRIGHT AND LICENSE
 
